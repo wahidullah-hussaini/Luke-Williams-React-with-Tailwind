@@ -1,32 +1,44 @@
 import React from 'react'
+import { img1, img2, img3 } from "../assets/images/images"
+import { appstyling } from "../Style"
 
-import {img1,img2,img3} from "../assets/images/images"
-// import {appstyling } from"../Style"
+const languages = [
+  "Expert in Python",
+  "Intermediate in Java",
+  "Basics of MySQL",
+];
 
+const images = [img1, img2, img3];
 
 function Languages() {
   return (
-    <>
-     <section className='px-6 py-2 max-w-6xl'>
-        <h1 className='font-bold text-4xl font-blue-300'>The languages that i know!</h1>
-        <div className='flex gap-8 text-1xl text-gray-700 my-10 '>
-            <div className='border-2  border-gold-600 rounded rounded-2xl p-3 '>Expert in python</div>
-            <div className='border-2 border-gold-600 rounded rounded-2xl p-3 '>Intermediate in Java</div>
-            <div className='border-2 border-gold-600 rounded rounded-2xl p-3  '>Basics at the Mysql</div>
+    <section className={appstyling.section}>
+      <h1 className={appstyling.title}>The languages that I know</h1>
+
+      <div className='flex flex-wrap gap-4 my-8'>
+        {languages.map((lang) => (
+          <div key={lang} className={appstyling.badge}>{lang}</div>
+        ))}
+      </div>
+
+        <p className={appstyling.textstyling}>
+        Programming is a tool for building useful things. Python is the language I
+        know best, Java helps me understand how bigger programs are organized, and
+        I am building my basics in MySQL to store and manage data. Right now I am
+        learning React and Tailwind CSS to turn all of this into modern, beautiful
+        websites that people can really use.
+      </p>
+        <div className='text-center m-auto'>
+      <h2 className='text-2xl font-bold text-foreground mb-4 mt-5 '>Gallery</h2>
+      <div className='flex justify-between items-center  border-gray-300 pb-5 mb-10 '>
+        {images.map((img, index) => (
+          <img key={index} className='w-60 h-60 rounded-card shadow-card shadow-xl bg-blue-200 ' src={img} alt="" />
+        ))}
         </div>
-        
-        <div>
-          <h2 className=' p-2 text-3xl font-bold mb-3'>The images card</h2>
-          <div className='flex gap-2'>
-            <img className='w-60 rounded-2xl  bg-blue-100'  src={img1} alt="" />
-            <img className='w-60 rounded-2xl' src={img2} alt="" />
-            <img className='w-60 rounded-2xl text-red-200' src={img3} alt="" />
-          </div>
-        </div>
-        {/* <p className={appstyling.textstyling }>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatibus amet, mollitia molestiae rem ut voluptatum nostrum est, quos deleniti commodi omnis! Id nisi veritatis ipsa ut accusamus eaque reiciendis?</p> */}
-        
-        </section> 
-    </>
+      </div>
+
+      
+    </section>
   )
 }
 
