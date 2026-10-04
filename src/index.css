@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+
+  /* App colors */
+  --color-background: #f0f2f5;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f2f4f7;
+
+  /* Text */
+  --color-foreground: #1c1e21;
+  --color-muted: #65676b;
+  --color-muted-light: #8a8d91;
+
+  /* Borders */
+  --color-border: #e4e6eb;
+
+  /* Social colors */
+  --color-like: #1877f2;
+  --color-love: #f33e58;
+  --color-success: #31a24c;
+  --color-warning: #f7b928;
+  --color-danger: #e41e3f;
+
+  /* Radius */
+  --radius-card: 1rem;
+  --radius-button: 0.65rem;
+  --radius-avatar: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgb(0 0 0 / 0.08);
+  --shadow-dropdown: 0 4px 16px rgb(0 0 0 / 0.12);
+}
